@@ -186,8 +186,9 @@ PontDeux = { % 37
   % Mesure 50 51
   a'1~| a'1~|
 
-  % Mesure 52, Génère un quart de cercle vers le bas 
-  a'2.-\bendAfter #-10  
+  % Mesure 52, Génère un quart de cercle vers le bas
+
+  a'2.\bendAfter #-10  r4
 
 }
 
