@@ -24,13 +24,14 @@ Theme = {
 
 ThemeAigu = { % Variante Aigüe
 
-  d''8. a''8. gis''8 g''8. f''8. c''8 |
+ d''8. a''8. gis''8 g''8. f''8. c''8 |
+ d''8. a''8. gis''8 g''8. f''8 f''16 c''8 |
 
 }
 
-Introduction = {
+Introduction = { % 01 à 08
 
-% Mesure 1 : 9 notes au total, 4 groupes distincts (queues en bas)
+ % Mesure 1 : 9 notes au total, 4 groupes distincts (queues en bas)
   \stemDown
   e'16\f^"Intro"[ e'8-. e'16]    e'8-.[ e'16 e'16-.~]    e'16[ e'16 e'8-.]    g'8[ gis'8] |
   \stemNeutral
@@ -38,7 +39,7 @@ Introduction = {
   % Mesure 2 (Pause)
   R1 |
 
-  \mark \markup { \box "A" }
+ \mark \markup { \box "A" }
   % Mesures 3 et 4
   \ThemeNuance
 
@@ -48,69 +49,122 @@ Introduction = {
   }
 }
 
-ThemeUn = {
+ThemeUn = { % 09 à 16
 
  % Mesures 9 à 12 : Répétition de la tourne principale (2 fois = 4 mesures)
 
-  \bar "||" ^"   Thème 1"
   \mark \markup { \box "B" }
+  \bar "||" ^"   Thème 1"
   \repeat unfold 2 {\Theme}
   
   % Mesures 13 et 14 (La variante aiguë)
   \ThemeAigu
-  }
 
  % Mesures 15 à 16 : Répétition de la tourne principale
   \Theme
 }
 
-PontUn = {
-
-\bar "||" ^"Pont 1"
+PontUn = { % 17 à 28
 
  % Mesure 17
-  e'8. a'8. e''4 a'8 e'4 |
+  e'8.\f a'8. e''4 a'8 e'4 |
 
   % Mesure 18
-  fis'8. b'8. fis''4 b'8 f'4 |
+  fis'8. b'8. fis''4 b'8 fis'4 |
 
   % Mesure 19
-  a'8. e''8. dis''8 d''8. c''8. g'8 |         % Mesure A
+  a'8. e''8. dis''8 d''8. c''8. g'8 | 
+  
+  % Mesure 20
+  r2 r4 r8 a'8~\mf |
 
-   % Mesure 20
-   r2 r4 r8 a'8~ |
+  \bar "||"
 
+  % Mesure 21
   \mark \markup { \box "C" }
+  a'1 |
 
-   % Mesure 21
-   a'1 |
+  % Mesure 22
+  gis'1 |
 
-   % MEsure 22
-   gis'1 |
-
-   % Mesure 23 et 24 
-   \repeat unfold 2 {a'8 r16 a'16~a'4 a'8 r16 a'16~a'4}
-
+  % Mesure 23 et 24
+  \repeat unfold 2 { a'8 r16 a'16~a'4 a'8 r16 a'16~a'4 | }
+  
   % Mesure 25
   fis'1 |
 
   % Mesure 26
   f'1 |
 
- % Mesure 27
- fis'8 r16 fis'16~fis'4 f'8 r16 f'16~f'4 |
+  % Mesure 27
+  fis'8\f r16 fis'16~fis'4 f'8 r16 f'16~f'4 | 
 
- % Mesure 28
+  % Mesure 28
   e'1 |
 
 }
 
-ThemeDeux = {
+ThemeDeux = { % 29 à 36
 
-  \bar "||" ^"   Thème 2"
-  \mark \markup { \box "D" }
-  % Mesure 29 et 30
-  \repeat unfold 2 {\Theme}
+ % Mesure 29 30
+ \mark \markup { \box "D" }
+ \bar "||" ^"   Thème 2"
+ \ThemeNuance
+
+ % Mesure 31 32
+ \Theme
+
+ % Mesure 33 34
+ \ThemeAigu
+
+ % Mesure 35 36
+ \Theme
+}
+
+PontDeux = { % 37
+
+ % Mesure 37
+  e'8.\f a'8. e''4 a'8 e'4 |
+
+  % Mesure 38
+  fis'8. b'8. fis''4 b'8 fis'4 |
+
+  % Mesure 39
+  gis'8. cis''8. gis''4 cis''8 gis'4 |
+  
+  % Mesure 40
+  r8 b'16 ais'16 r4 cis''16 c''16 r8 r4
+  % r2 r4 r8 a'8~\mf |
+
+  \bar "||"
+
+  % Mesure 41
+  \mark \markup { \box "E" }
+  e'8. a'8. e''8~e''2~ |
+  
+  % Mesure 42
+  e''16 f''16 e''16 b'16 a'8 f'8 e'2
+
+  % Mesure 43
+  e'8. a'8. e''8~e''4 e''4 |
+
+  % Mesure 44
+  \repeat unfold 8 {e''16} e''4 e''4
+
+  % Mesure 23 et 24
+  \repeat unfold 2 { a'8 r16 a'16~a'4 a'8 r16 a'16~a'4 | }
+  
+  % Mesure 25
+  fis'1 |
+
+  % Mesure 26
+  f'1 |
+
+  % Mesure 27
+  fis'8\f r16 fis'16~fis'4 f'8 r16 f'16~f'4 | 
+
+  % Mesure 28
+  e'1 |
 
 }
 
@@ -126,12 +180,13 @@ saxMusic = {
 
   \PontUn % 17 à 28
 
-  \ThemeDeux % 29 à
+  \ThemeDeux
 
+  \PontDeux
 }
 
 sautsDeLigne = {
-  \repeat unfold 10 { s1*4 \break }
+  \repeat unfold 10 { s1*6 \break }
 }
 
 \score {
