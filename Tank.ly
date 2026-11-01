@@ -8,7 +8,7 @@
   subtitle = "Cowboy Bebop"
   composer = "Yoko Kanno (The Seatbelts)"
   arranger = "Ewenique"
-  instrument = "Saxophone Baryton"
+  instrument = "Tuba en Si bémol"
 }
 
 \paper {
@@ -192,8 +192,8 @@ PontDeux = { % 37
 
 }
 
-saxMusic = {
-  \clef treble
+tubaMusic = \transpose es c, {
+  \clef bass
   \time 4/4
   \key c \major
   \tempo 4 = 141
@@ -216,7 +216,7 @@ sautsDeLigne = {
 \score {
   \new Staff {
     <<
-      \saxMusic
+      \tubaMusic
       \sautsDeLigne
     >>
   }
