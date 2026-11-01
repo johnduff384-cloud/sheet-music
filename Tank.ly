@@ -1,11 +1,28 @@
 \version "2.24.0"
 
+% Réduire / Augmenter la taille de toute la partition, Défaut 20
+#(set-global-staff-size 18)
+
 \header {
   title = "Tank!"
   subtitle = "Cowboy Bebop"
   composer = "Yoko Kanno (The Seatbelts)"
   arranger = "Ewenique"
   instrument = "Saxophone Baryton"
+}
+
+\paper {
+  % 1. Autorise LilyPond à étirer l'espace entre toutes les portées
+  ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  
+  % 2. Ajuste la souplesse de l'espacement vertical (système à système)
+  system-system-spacing = #'(
+    (basic-distance . 12)
+    (minimum-distance . 8)
+    (padding . 2)
+    (stretchability . 40) % Plus ce chiffre est élevé, plus LilyPond étirera l'espace
+  )
 }
 
 ThemeNuance = {
@@ -136,7 +153,7 @@ PontDeux = { % 37
   r8 b'16 ais'16 r4 cis''16 c''16 r8 r4
   % r2 r4 r8 a'8~\mf |
 
-  \bar "||"
+  \bar "||"^"   Final"
 
   % Mesure 41
   \mark \markup { \box "E" }
@@ -151,20 +168,26 @@ PontDeux = { % 37
   % Mesure 44
   \repeat unfold 8 {e''16} e''4 e''4
 
-  % Mesure 23 et 24
-  \repeat unfold 2 { a'8 r16 a'16~a'4 a'8 r16 a'16~a'4 | }
-  
-  % Mesure 25
-  fis'1 |
+  % Mesure 45
+  a'8. aes'8. g'8~g'8. ges'8. f'8~ |
 
-  % Mesure 26
-  f'1 |
+  % Mesure 46
+  f'8. e'8. ees'8~ ees'8. d'8. des'8 |
 
-  % Mesure 27
-  fis'8\f r16 fis'16~fis'4 f'8 r16 f'16~f'4 | 
+  % Mesure 47
+  a'8 r8 r4 r2 |
 
-  % Mesure 28
-  e'1 |
+  % Mesure 48
+  r2 r4 c''16 f'16 r8
+
+  % Mesure 49
+  r4 r16 a'8.~ a'2~ |
+
+  % Mesure 50 51
+  a'1~| a'1~|
+
+  % Mesure 52, Génère un quart de cercle vers le bas 
+  a'2.-\bendAfter #-10  
 
 }
 
@@ -186,7 +209,7 @@ saxMusic = {
 }
 
 sautsDeLigne = {
-  \repeat unfold 10 { s1*6 \break }
+  \repeat unfold 11 { s1*5 \break }
 }
 
 \score {
