@@ -192,7 +192,7 @@ PontDeux = { % 37
 
 }
 
-tubaMusic = \transpose es c, {
+tubaMusic = \transpose f bes,,{
   \clef bass
   \time 4/4
   \key c \major
