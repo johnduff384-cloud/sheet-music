@@ -50,7 +50,7 @@ Introduction = { % 01 à 08
 
  % Mesure 1 : 9 notes au total, 4 groupes distincts (queues en bas)
   \stemDown
-  e'16\f^"Intro"[ e'8-. e'16]    e'8-.[ e'16 e'16-.~]    e'16[ e'16 e'8-.]    g'8[ gis'8] |
+  e''16\f^"Intro"[ e''8-. e''16]    e''8-.[ e''16 e''16-.~]    e''16[ e''16 e''8-.]    g''8[ gis''8] |
   \stemNeutral
   
   % Mesure 2 (Pause)
@@ -91,7 +91,7 @@ PontUn = { % 17 à 28
 
   % Mesure 19
   a'8. e''8. dis''8 d''8. c''8. g'8 | 
-  
+
   % Mesure 20
   r2 r4 r8 a'8~\mf |
 
@@ -113,11 +113,12 @@ PontUn = { % 17 à 28
   % Mesure 26
   f'1 |
 
+  \transpose c c' {
   % Mesure 27
   fis'8\f r16 fis'16~fis'4 f'8 r16 f'16~f'4 | 
 
   % Mesure 28
-  e'1 |
+  e'1 | }
 
 }
 
@@ -153,7 +154,7 @@ PontDeux = { % 37
   r8 b'16 ais'16 r4 cis''16 c''16 r8 r4
   % r2 r4 r8 a'8~\mf |
 
-  \bar "||"^"   Final"
+  \bar "||" ^"   Final"
 
   % Mesure 41
   \mark \markup { \box "E" }
@@ -168,11 +169,12 @@ PontDeux = { % 37
   % Mesure 44
   \repeat unfold 8 {e''16} e''4 e''4
 
+  \transpose c c' {
   % Mesure 45
   a'8. aes'8. g'8~g'8. ges'8. f'8~ |
 
   % Mesure 46
-  f'8. e'8. ees'8~ ees'8. d'8. des'8 |
+  f'8. e'8. ees'8~ ees'8. d'8. des'8 | }
 
   % Mesure 47
   a'8 r8 r4 r2 |
