@@ -8,7 +8,7 @@
   subtitle = "Cowboy Bebop"
   composer = "Yoko Kanno (The Seatbelts)"
   arranger = "Ewenique"
-  instrument = "Tuba en Si bémol"
+  instrument = "Tuba en Si bémol (BF)"
 }
 
 \paper {
