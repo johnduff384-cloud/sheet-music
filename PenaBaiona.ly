@@ -50,10 +50,16 @@ tubaNotes = \relative f, {
   \bar "|."
 }
 
+
+sautsDeLigne = {
+  \repeat unfold 11 { s1*5 \break }
+}
+
 % --- Structure de la partition ---
 \score {
   \new Staff {
     \context Voice = "tuba" { \tubaNotes }
+    \sautsDeLigne
   }
   \layout { }
   \midi { }
