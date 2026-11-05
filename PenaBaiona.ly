@@ -48,7 +48,7 @@ tubaNotes = \relative f, {
     
    d a | d a | d a | d a | d a \textMark "D.C. al Coda"| d \fermata r \fermata \bar "||" \break
   
-  \textMark \markup { \hspace #1 \musicglyph "scripts.varcoda" }
+  \textMark \markup \scale #'(1.85 . 1.15) \coda
   bes f |
     
      % Accord final
