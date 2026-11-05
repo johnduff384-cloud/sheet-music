@@ -16,6 +16,7 @@ tubaNotes = \relative f, {
   \key f \major
   \time 2/4
   \tempo 4 = 90
+  \override Script.padding = #2
   
   % --- INTRODUCTION (4 mesures typiques) ---
   r4 a\f \fermata | d\fermata f\fermata | \bar "||" \break
@@ -24,16 +25,15 @@ tubaNotes = \relative f, {
   
   % --- COUPLET ---
   \repeat volta 2 {
-    f4 r c' r | f, r c' r | f, r c' r | c r g r |
-    c4 r g r | c r g r | c r g r | f r c' r | \break
+    d4-. a-. | d-. a-. | d-. a-. | d-. a-. |d-. a-. |
+    d-. d8-. e-. | f4-. c-. | f-. c-. | g'-. c,-. |\break
     
-    f,4 r c' r | f, r c' r | f, r f r | bes r f r |
-    bes4 r f r | f r c' r | c r g r |
+    g'-. c,-. | d-. f-. | e-. a,-. | d-. a-. | d-. a-. |
   }
   \alternative {
-    { \volta 1 { f4 g a bes } } % Relance couplet
-    { \volta 2 { f4 r f r } }   % Transition vers refrain
-  } \break
+    { \volta 1 { d-. a-. | d8 a d des } } % Relance couplet
+    { \volta 2 { d4-. a } }   % Transition vers refrain
+  } \textMark "    To Coda" d-. r | \break
   
   % --- REFRAIN ---
   \repeat volta 2 {
