@@ -19,8 +19,8 @@ tubaNotes = \relative f, {
   
   % --- INTRODUCTION (4 mesures typiques) ---
   r4 a\f \fermata | d\fermata f\fermata | \bar "||" \break
-   f4-. c-. | f-. c-. | 
-  f,4 r c' r | f, g a bes | \break
+   f4-. c-. | f-. c-. | f-. c-. | f-. c-. | 
+  d-. a-. | d-. a-. | d-. d8-. des-. | \break
   
   % --- COUPLET ---
   \repeat volta 2 {
