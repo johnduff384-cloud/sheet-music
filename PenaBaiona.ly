@@ -10,6 +10,14 @@
   tagline = ##f
 }
 
+leTheme =  { \relative c' {
+  
+    d4 d8. e16 | f2~ | f8 f f e | g f e d | a4 a8. bes16 | c2~ | c8 c c b | d c bes a | \break
+    
+  }
+  
+}
+
 % --- Notes du Tuba en Fa Majeur (Style Banda / Registre Corrigé) ---
 tubaNotes = \relative f, {
   \clef bass
@@ -17,7 +25,7 @@ tubaNotes = \relative f, {
   \time 2/4
   \tempo 4 = 90
   \override Script.padding = #1
-  
+
   % --- INTRODUCTION (4 mesures typiques) ---
   r4 a\f \fermata | d\fermata f\fermata | \bar "||" \break
    f4-. c-. | f-. c-. | f-. c-. | f-. c-. | 
@@ -49,7 +57,12 @@ tubaNotes = \relative f, {
    d a | d a | d a | d a | d a \textMark "D.C. al Coda"| d \fermata r \fermata \bar "||" \break
   
   \textMark \markup \scale #'(1.85 . 1.15) \coda
-  bes f |
+  bes f' | bes, f' | bes, f' | bes, f' | f c | f c | f c | f c | \pageBreak
+  g' c, | g' c, | g' c, | g' c, | f c | f8 c d e | f4 c | f8 f g a |  \break
+  \textMark "Thème"
+  \leTheme
+   \transpose  d g {d4 d8. e16 | f2~ | f8 f f e | g f e d | }
+    a2~ | a8 bes c d | c8 c c b | d c bes a | \break
     
      % Accord final
   
@@ -58,7 +71,7 @@ tubaNotes = \relative f, {
 
 
 sautsDeLigne = {
-  \repeat unfold 11 { s1*5 \break }
+  %\repeat unfold 11 { s1*5 \break }
 }
 
 % --- Structure de la partition ---
