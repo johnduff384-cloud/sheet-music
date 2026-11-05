@@ -14,11 +14,12 @@
 tubaNotes = \relative f, {
   \clef bass
   \key f \major
-  \time 4/4
+  \time 2/4
   \tempo 4 = 90
   
   % --- INTRODUCTION (4 mesures typiques) ---
-  f4 r c' r | f, r c' r | 
+  r4 a\f \fermata | d\fermata f\fermata | \bar "||" \break
+   f4-. c-. | f-. c-. | 
   f,4 r c' r | f, g a bes | \break
   
   % --- COUPLET ---
