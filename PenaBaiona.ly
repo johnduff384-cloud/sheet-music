@@ -16,7 +16,7 @@ tubaNotes = \relative f, {
   \key f \major
   \time 2/4
   \tempo 4 = 90
-  \override Script.padding = #2
+  \override Script.padding = #1
   
   % --- INTRODUCTION (4 mesures typiques) ---
   r4 a\f \fermata | d\fermata f\fermata | \bar "||" \break
@@ -37,16 +37,21 @@ tubaNotes = \relative f, {
   
   % --- REFRAIN ---
   \repeat volta 2 {
-    bes4 r f r | bes r f r | f r c' r | f, r c' r |
-    c4 r g r | c r g r | f r c' r | f,4 r f r | \break
+    bes f' | bes, f' | bes, f' | bes, f' |
+    f c | f c | f c | f c | \break
     
-    bes4 r f r | bes r f r | f r c' r | f, r c' r |
-    c4 r g r | c r g r |
+    g' c, | g' c, | g' c, |
   }
   \alternative {
-    { \volta 1 { f4 r f r } }
-    { \volta 2 { f4 c f r } }   % Accord final
-  }
+    { \volta 1 { g' c, | f c | f8 c d e | f4 c | f8 f g a | } \break }
+    { \volta 2 { g4 c, | } } } 
+    
+   d a | d a | d a | d a | d a \textMark "D.C. al Coda"| d \fermata r \fermata \bar "||" \break
+  
+  \textMark \markup { \hspace #1 \musicglyph "scripts.varcoda" }
+  bes f |
+    
+     % Accord final
   
   \bar "|."
 }
